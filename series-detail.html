@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series Details - NeoFlix</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-play-circle"></i>
+                <span>NeoFlix</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#series">Series</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#trending">Trending</a></li>
+                <li><a href="#mylist">My List</a></li>
+            </ul>
+            <div class="nav-right">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-bell"></i>
+                <div class="profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Series Detail Hero -->
+    <section class="detail-hero">
+        <div class="detail-backdrop" id="detailBackdrop">
+            <video class="detail-video" id="detailVideo" autoplay muted loop playsinline style="display: none;">
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+        <div class="detail-content">
+            <div class="detail-poster" id="detailPoster"></div>
+            <div class="detail-info">
+                <h1 class="detail-title" id="detailTitle">Series Title</h1>
+                <div class="detail-meta" id="detailMeta">
+                    <span class="year" id="detailYear">2024</span>
+                    <span class="rating" id="detailRating">18+</span>
+                    <span class="seasons" id="detailSeasons">4 Seasons</span>
+                    <span class="match" id="detailMatch">98% Match</span>
+                </div>
+                <p class="detail-description" id="detailDescription">Series description goes here</p>
+                <div class="detail-buttons">
+                    <button class="btn btn-play">
+                        <i class="fas fa-play"></i> Play
+                    </button>
+                    <button class="btn btn-info">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Series Details Sections -->
+    <section class="detail-section">
+        <div class="container">
+            <div class="detail-grid">
+                <!-- Main Content -->
+                <div class="detail-main">
+                    <!-- Overview -->
+                    <div class="detail-card">
+                        <h2 class="detail-heading">Overview</h2>
+                        <p class="detail-text" id="overviewText">
+                            Detailed overview of the series goes here. This section provides comprehensive information about the plot, characters, and themes.
+                        </p>
+                    </div>
+
+                    <!-- Cast -->
+                    <div class="detail-card">
+                        <h2 class="detail-heading">Cast</h2>
+                        <div class="cast-grid" id="castGrid">
+                            <div class="cast-member">
+                                <img src="https://via.placeholder.com/150x200" alt="Actor">
+                                <h3>Actor Name</h3>
+                                <p>Character Name</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Episodes -->
+                    <div class="detail-card">
+                        <h2 class="detail-heading">Episodes</h2>
+                        <div class="episodes-list" id="episodesList">
+                            <div class="episode-item">
+                                <div class="episode-number">Episode 1</div>
+                                <div class="episode-info">
+                                    <h4>Episode Title</h4>
+                                    <p>Episode description and details</p>
+                                </div>
+                                <div class="episode-duration">42 min</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ratings & Reviews -->
+                    <div class="detail-card">
+                        <h2 class="detail-heading">Rating & Reviews</h2>
+                        <div class="rating-summary">
+                            <div class="rating-score" id="ratingScore">8.5</div>
+                            <div class="rating-details">
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p class="rating-count">Based on 45,234 ratings</p>
+                            </div>
+                        </div>
+                        <div class="reviews-list">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <h4>Amazing Series!</h4>
+                                    <span class="review-rating">★★★★★</span>
+                                </div>
+                                <p class="review-text">This is an incredible series that keeps you engaged from start to finish. Highly recommended!</p>
+                                <small class="review-author">- User Reviews</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="detail-sidebar">
+                    <!-- Additional Info -->
+                    <div class="detail-card">
+                        <h3 class="detail-heading">Information</h3>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="label">Genre:</span>
+                                <span class="value" id="genreValue">Drama, Sci-Fi</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Language:</span>
+                                <span class="value" id="languageValue">English</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Director:</span>
+                                <span class="value" id="directorValue">Director Name</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Writer:</span>
+                                <span class="value" id="writerValue">Writer Name</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Producer:</span>
+                                <span class="value" id="producerValue">Producer Name</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Total Seasons:</span>
+                                <span class="value" id="totalSeasonsValue">4</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Total Episodes:</span>
+                                <span class="value" id="totalEpisodesValue">42</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Similar Series -->
+                    <div class="detail-card">
+                        <h3 class="detail-heading">Similar Series</h3>
+                        <div class="similar-series" id="similarSeries">
+                            <div class="similar-item">
+                                <img src="https://via.placeholder.com/100x150" alt="Similar">
+                                <h4>Similar Series Name</h4>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Audio Description</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Media Center</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Legal Notices</a></li>
+                        <li><a href="#">Cookie Preferences</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <p class="copyright">&copy; 2024 StreamFlix, Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="series-detail.js"></script>
+</body>
+</html>

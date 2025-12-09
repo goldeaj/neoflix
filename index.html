@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoFlix - Watch Your Favorite Series</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-play-circle"></i>
+                <span>NeoFlix</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#trending">Trending</a></li>
+                <li><a href="#popular">Popular</a></li>
+                <li><a href="#mylist">My List</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Search shows...">
+                    <div class="search-results"></div>
+                </div>
+                <i class="fas fa-bell"></i>
+                <div class="profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile">
+                    <span class="profile-badge">Pro</span>
+                    <div class="profile-dropdown">
+                        <div class="profile-header">
+                            <img src="https://via.placeholder.com/60" alt="Profile">
+                            <div class="profile-info">
+                                <h4>Anujeet</h4>
+                                <span class="profile-plan">Premium Member</span>
+                            </div>
+                        </div>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-heart"></i>
+                                <span id="wishlistCount">0</span>
+                                <small>Wishlist</small>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-eye"></i>
+                                <span>24</span>
+                                <small>Watched</small>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-star"></i>
+                                <span>15</span>
+                                <small>Rated</small>
+                            </div>
+                        </div>
+                        <ul class="profile-menu">
+                            <li><a href="#"><i class="fas fa-user"></i> Account</a></li>
+                            <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                            <li><a href="#"><i class="fas fa-question-circle"></i> Help Center</a></li>
+                            <li><a href="#"><i class="fas fa-crown"></i> Upgrade Plan</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#" class="signout"><i class="fas fa-sign-out-alt"></i> Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video -->
+    <section id="home" class="hero">
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="./assets/videos/Stranger Things 5  Official Trailer  Netflix - Netflix (1080p, h264).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Stranger Things</h1>
+            <p class="hero-description">
+                When a young boy vanishes, a small town uncovers a mystery involving secret experiments, 
+                terrifying supernatural forces and one strange little girl.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-play">
+                    <i class="fas fa-play"></i> Play
+                </button>
+                <button class="btn btn-info">
+                    <i class="fas fa-info-circle"></i> More Info
+                </button>
+            </div>
+            <div class="hero-meta">
+                <span class="badge">New Episodes</span>
+                <span class="year">2024</span>
+                <span class="rating">18+</span>
+                <span class="seasons">4 Seasons</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Series Section -->
+    <section id="trending" class="series-section">
+        <div class="container">
+            <h2 class="section-title">Trending Now</h2>
+            <div class="series-carousel">
+                <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="series-grid">
+                    <div class="series-card">
+                        <img src="https://i.pinimg.com/736x/5a/e0/db/5ae0db4ac98161f3ccbdf1c507b8672f.jpg" alt="The Crown">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>The Crown</h3>
+                                <div class="card-meta">
+                                    <span class="match">98% Match</span>
+                                    <span class="year">2023</span>
+                                    <span class="rating">16+</span>
+                                </div>
+                                <p class="card-description">Chronicles the reign of Queen Elizabeth II</p>
+                                <div class="card-actions">
+                                    <button class="icon-btn play-btn"><i class="fas fa-play"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-plus"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-thumbs-up"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="series-card">
+                        <img src="https://i.pinimg.com/1200x/37/62/75/37627587496965efcc0ae42ac9dff525.jpg" alt="Breaking Bad">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>Breaking Bad</h3>
+                                <div class="card-meta">
+                                    <span class="match">99% Match</span>
+                                    <span class="year">2013</span>
+                                    <span class="rating">18+</span>
+                                </div>
+                                <p class="card-description">A chemistry teacher turns to cooking meth</p>
+                                <div class="card-actions">
+                                    <button class="icon-btn play-btn"><i class="fas fa-play"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-plus"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-thumbs-up"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="series-card">
+                        <img src="https://i.pinimg.com/736x/9a/ab/e8/9aabe8e47cc2c3ba25aacce0eec67141.jpg" alt="The Witcher">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>The Witcher</h3>
+                                <div class="card-meta">
+                                    <span class="match">95% Match</span>
+                                    <span class="year">2024</span>
+                                    <span class="rating">18+</span>
+                                </div>
+                                <p class="card-description">Geralt of Rivia, a monster hunter</p>
+                                <div class="card-actions">
+                                    <button class="icon-btn play-btn"><i class="fas fa-play"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-plus"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-thumbs-up"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="series-card">
+                        <img src="https://i.pinimg.com/1200x/f7/25/fa/f725fa9666b89729d8ee8a6f51a1ccf0.jpg" alt="The Last of Us">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>The Last of Us</h3>
+                                <div class="card-meta">
+                                    <span class="match">97% Match</span>
+                                    <span class="year">2024</span>
+                                    <span class="rating">18+</span>
+                                </div>
+                                <p class="card-description">Post-apocalyptic survival story</p>
+                                <div class="card-actions">
+                                    <button class="icon-btn play-btn"><i class="fas fa-play"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-plus"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-thumbs-up"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="series-card">
+                        <img src="https://i.pinimg.com/1200x/91/43/1e/91431e90916d32618810235e6f6ad645.jpg" alt="Wednesday">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>Wednesday</h3>
+                                <div class="card-meta">
+                                    <span class="match">94% Match</span>
+                                    <span class="year">2023</span>
+                                    <span class="rating">13+</span>
+                                </div>
+                                <p class="card-description">Wednesday Addams at Nevermore Academy</p>
+                                <div class="card-actions">
+                                    <button class="icon-btn play-btn"><i class="fas fa-play"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-plus"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-thumbs-up"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="series-card">
+                        <img src="https://i.pinimg.com/736x/49/96/bc/4996bcb2d11c2da4fb7603ff2fedc9ca.jpg" alt="House of the Dragon">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>House of the Dragon</h3>
+                                <div class="card-meta">
+                                    <span class="match">96% Match</span>
+                                    <span class="year">2024</span>
+                                    <span class="rating">18+</span>
+                                </div>
+                                <p class="card-description">The Targaryen civil war begins</p>
+                                <div class="card-actions">
+                                    <button class="icon-btn play-btn"><i class="fas fa-play"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-plus"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-thumbs-up"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular on StreamFlix -->
+    <section id="popular" class="series-section">
+        <div class="container">
+            <h2 class="section-title">Popular on NeoFlix</h2>
+            <div class="series-carousel">
+                <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="series-grid">
+                    <div class="series-card">
+                        <img src="https://i.pinimg.com/1200x/6e/42/0b/6e420b7bd2a65359258ee4c5ee1501dd.jpg" alt="Money Heist">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>Money Heist</h3>
+                                <div class="card-meta">
+                                    <span class="match">92% Match</span>
+                                    <span class="year">2021</span>
+                                    <span class="rating">16+</span>
+                                </div>
+                                <p class="card-description">A criminal mastermind plans the heist</p>
+                                <div class="card-actions">
+                                    <button class="icon-btn play-btn"><i class="fas fa-play"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-plus"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-thumbs-up"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="series-card">
+                        <img src="https://i.pinimg.com/1200x/91/6b/37/916b376a61e8f11293c115bc0361a7d2.jpg" alt="Squid Game">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>Squid Game</h3>
+                                <div class="card-meta">
+                                    <span class="match">96% Match</span>
+                                    <span class="year">2023</span>
+                                    <span class="rating">18+</span>
+                                </div>
+                                <p class="card-description">Deadly survival games for a prize</p>
+                                <div class="card-actions">
+                                    <button class="icon-btn play-btn"><i class="fas fa-play"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-plus"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-thumbs-up"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="series-card">
+                        <img src="https://i.pinimg.com/1200x/e8/2f/82/e82f828f60f7d210d7c8574595c771e9.jpg" alt="Dark">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>Dark</h3>
+                                <div class="card-meta">
+                                    <span class="match">93% Match</span>
+                                    <span class="year">2020</span>
+                                    <span class="rating">16+</span>
+                                </div>
+                                <p class="card-description">Time travel and family secrets</p>
+                                <div class="card-actions">
+                                    <button class="icon-btn play-btn"><i class="fas fa-play"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-plus"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-thumbs-up"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="series-card">
+                        <img src="https://i.pinimg.com/736x/6c/9b/dd/6c9bddfd0635a798cc47f2935a3e8f47.jpg" alt="Peaky Blinders">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>Peaky Blinders</h3>
+                                <div class="card-meta">
+                                    <span class="match">94% Match</span>
+                                    <span class="year">2022</span>
+                                    <span class="rating">18+</span>
+                                </div>
+                                <p class="card-description">A gangster family epic set in 1920s</p>
+                                <div class="card-actions">
+                                    <button class="icon-btn play-btn"><i class="fas fa-play"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-plus"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-thumbs-up"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="series-card">
+                        <img src="https://i.pinimg.com/736x/49/2d/03/492d039091d0625a05ab25c0a270dade.jpg" alt="Ozark">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>Ozark</h3>
+                                <div class="card-meta">
+                                    <span class="match">95% Match</span>
+                                    <span class="year">2022</span>
+                                    <span class="rating">18+</span>
+                                </div>
+                                <p class="card-description">Money laundering in the Missouri Ozarks</p>
+                                <div class="card-actions">
+                                    <button class="icon-btn play-btn"><i class="fas fa-play"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-plus"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-thumbs-up"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="series-card">
+                        <img src="https://i.pinimg.com/736x/49/7b/8b/497b8bdd152ea05fce5654a0b8c799f7.jpg" alt="The Mandalorian">
+                        <div class="card-overlay">
+                            <div class="card-info">
+                                <h3>The Mandalorian</h3>
+                                <div class="card-meta">
+                                    <span class="match">97% Match</span>
+                                    <span class="year">2024</span>
+                                    <span class="rating">13+</span>
+                                </div>
+                                <p class="card-description">A bounty hunter in the Star Wars universe</p>
+                                <div class="card-actions">
+                                    <button class="icon-btn play-btn"><i class="fas fa-play"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-plus"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-thumbs-up"></i></button>
+                                    <button class="icon-btn"><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- My List Section -->
+    <section id="mylist" class="series-section">
+        <div class="container">
+            <h2 class="section-title">My List</h2>
+            <div class="mylist-grid" id="myListGrid">
+                <div class="empty-state">
+                    <i class="fas fa-plus-circle"></i>
+                    <p>Your list is empty</p>
+                    <span>Add shows and movies to your list by clicking the + button</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">Audio Description</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Media Center</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Legal Notices</a></li>
+                        <li><a href="#">Cookie Preferences</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <p class="copyright">&copy; 2024 NeoFlix, Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
